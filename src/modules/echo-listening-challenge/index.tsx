@@ -255,7 +255,7 @@ function QuestionCard({
 }: {
   index: number;
   q: ListeningQuestion;
-  answer?: Answer;
+  answer: Answer | undefined;
   onSubmit(picked: string[]): void;
 }) {
   const [picked, setPicked] = useState<string[]>([]);
