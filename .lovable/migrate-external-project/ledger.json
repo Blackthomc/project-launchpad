@@ -1,0 +1,83 @@
+{
+  "source": "code-archive: project-migration-hub-main.zip (Lovable TanStack Start project, same template revision; Ludik English-learning app)",
+  "capabilities": [
+    {
+      "capability": "code",
+      "source": "src/, public/ (10 routes, ludik components, data, store, services, modules)",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "schema",
+      "source": "none - no server database; app state kept in browser localStorage (ludik:state:v1) via PersistenceAdapter",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "records",
+      "source": "none - seed data bundled in src/store/seed.ts and src/data/*",
+      "outcome": "migrate with code",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "auth identities",
+      "source": "simulated authService (guest / Moodle SSO placeholder, no real accounts)",
+      "outcome": "preserve simulated behavior; no users exist to import",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "authorization",
+      "source": "client-side plan gating (rules.ts, PlanLockDialog)",
+      "outcome": "migrate with code",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "uploaded file bytes",
+      "source": "none (only bundled character images in src/assets)",
+      "outcome": "migrate as hosted assets",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "external providers",
+      "source": "Google Fonts only; no payments, email, AI, analytics, storage",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "public endpoints / callbacks / webhooks / schedules",
+      "source": "none",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "secrets",
+      "source": "none required",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "cutover",
+      "source": "previous live app (if any)",
+      "outcome": "user publishes this project when ready",
+      "status": "pending",
+      "next_action": "User publishes"
+    },
+    {
+      "capability": "verification",
+      "source": "build, tests, routes, guest flow",
+      "outcome": "verify",
+      "status": "verified",
+      "next_action": "none"
+    }
+  ],
+  "notes": "Copied unchanged except character images now served as hosted assets. Build OK, typecheck clean, 20 tests pass; guest sign-in, home, 6 pages, 4 skill paths, level dialog and saved progress checked in browser with no errors."
+}
