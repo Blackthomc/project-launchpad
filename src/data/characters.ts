@@ -2,10 +2,15 @@
  * Los cuatro personajes oficiales de Ludik (sección 1.6)
  * Ilustraciones provisionales generadas; reemplazar por las oficiales.
  * ============================================================ */
-import echoImg from "@/assets/char-echo.png";
-import lexiImg from "@/assets/char-lexi.png";
-import tintaImg from "@/assets/char-tinta.png";
-import fonoImg from "@/assets/char-fono.png";
+import echoAsset from "@/assets/char-echo.png.asset.json";
+import lexiAsset from "@/assets/char-lexi.png.asset.json";
+import tintaAsset from "@/assets/char-tinta.png.asset.json";
+import fonoAsset from "@/assets/char-fono.png.asset.json";
+
+const echoImg = echoAsset.url;
+const lexiImg = lexiAsset.url;
+const tintaImg = tintaAsset.url;
+const fonoImg = fonoAsset.url;
 import type { SkillId } from "@/types/ludik";
 
 export interface Character {
